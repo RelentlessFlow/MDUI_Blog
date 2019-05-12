@@ -601,6 +601,16 @@ $("#printLocation").append("<div id=\"qrcode\"></div>");
 
 
 
+    // Welcome.html
+$(".welcomeButton button:nth-child(1)").click(function () {
+    localStorage.setItem("themeSetting","0");
+    window.location.href = "index.html";
+});
+$(".welcomeButton button:nth-child(2)").click(function () {
+    localStorage.setItem("themeSetting","1");
+    window.location.href = "index.html";
+});
+
 
 
 

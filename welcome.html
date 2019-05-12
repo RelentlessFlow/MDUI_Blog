@@ -76,9 +76,9 @@
 </div>
 
 
-
 <!--背景图片  ： 沉浸系统-->
-<div class="bgCarouselMaks" style="position: fixed;top: 0;left: 0;width: 100%;height: 100%;opacity: 0.5;background-color: black;z-index: -1"></div>
+<div class="bgCarouselMaks"
+     style="position: fixed;top: 0;left: 0;width: 100%;height: 100%;opacity: 0.5;background-color: black;z-index: -1"></div>
 <div id="bgCarousel" style="z-index: -2">
     <img src="image/bgPic/red.jpg">
     <img src="image/bgPic/pink.jpg">
@@ -100,7 +100,10 @@
     <img src="image/bgPic/default.jpg">
 </div>
 
-
+<div class="welcomeButton">
+    <button class="mdui-btn mdui-ripple">简约模式</button>
+    <button class="mdui-btn mdui-ripple">沉浸模式</button>
+</div>
 
 
 <!--主体内容-->
@@ -126,59 +129,83 @@
     </div>
 
 
-
-        <div class="mdui-dialog" id="shareButton">
-            <div class="mdui-dialog-title">请您复制到剪切板后手动发送</div>
-            <div class="mdui-dialog-content" id="printLocation"></div>
-            <div class="mdui-dialog-actions">
-                <button class="mdui-btn mdui-ripple" mdui-dialog-close>确定</button>
-                <button class="mdui-btn mdui-ripple" mdui-dialog-confirm onclick="CopyLocation()">复制到剪切板</button>
-            </div>
+    <div class="mdui-dialog" id="shareButton">
+        <div class="mdui-dialog-title">请您复制到剪切板后手动发送</div>
+        <div class="mdui-dialog-content" id="printLocation"></div>
+        <div class="mdui-dialog-actions">
+            <button class="mdui-btn mdui-ripple" mdui-dialog-close>确定</button>
+            <button class="mdui-btn mdui-ripple" mdui-dialog-confirm onclick="CopyLocation()">复制到剪切板</button>
         </div>
     </div>
+</div>
 
-    <script src="js/jquery-3.4.0.min.js"></script>
-    <script src="js/mdui.js"></script>
-    <script src="js/jquery.qrcode.min.js"></script>
-    <script src="js/returnTop.js"></script>
-    <script src="js/main.js"></script>
-    <script>
+<script src="js/jquery-3.4.0.min.js"></script>
+<script src="js/mdui.js"></script>
+<script src="js/jquery.qrcode.min.js"></script>
+<script src="js/returnTop.js"></script>
+<script src="js/main.js"></script>
+<script>
+    localStorage.setItem("themeSetting", "0");
+    $(".welcomeButton button").hide();
+    $("#welcomePage .mdui-typo:not(:first)").hide();
+    // $("#welcomePage .mdui-typo:nth-child(1)").onclick=WelcomeTextDisplay(1);
+    // $("#welcomePage .mdui-typo:nth-child(2)").onclick=WelcomeTextDisplay(2);
+    // $("#welcomePage .mdui-typo:nth-child(3)").onclick=WelcomeTextDisplay(3);
+    // $("#welcomePage .mdui-typo:nth-child(4)").onclick=WelcomeTextDisplay(4);
 
-            $("#welcomePage .mdui-typo:not(:first)").hide();
-            // $("#welcomePage .mdui-typo:nth-child(1)").onclick=WelcomeTextDisplay(1);
-            // $("#welcomePage .mdui-typo:nth-child(2)").onclick=WelcomeTextDisplay(2);
-            // $("#welcomePage .mdui-typo:nth-child(3)").onclick=WelcomeTextDisplay(3);
-            // $("#welcomePage .mdui-typo:nth-child(4)").onclick=WelcomeTextDisplay(4);
-
-            function WelcomeDisplayText(){
-                setTimeout(function () {
-                    $("#welcomePage .mdui-typo:nth-child(1)").hide(1000);
-                    $("#welcomePage .mdui-typo:nth-child(2)").show(1000);
-                },1000);
-                setTimeout(function () {
-                    $("#welcomePage .mdui-typo:nth-child(2)").hide(1000);
-                    $("#welcomePage .mdui-typo:nth-child(3)").show(1000);
-                    if (window.innerWidth>1024){
-                        $(".mdui-drawer").removeClass("mdui-drawer-close");
-                        $(".mdui-drawer").addClass("mdui-drawer-open");
-                    }
-                },4000);
-                setTimeout(function () {
-                    $("#welcomePage .mdui-typo:nth-child(3)").hide(1000);
-                    $("#welcomePage .mdui-typo:nth-child(4)").show(1000);
-                },7000);
-                setTimeout(function () {
-                    $("#welcomePage .mdui-typo:nth-child(4)").hide(1000);
-                    $("#welcomePage .mdui-typo:nth-child(5)").show(1000);
-                },10000);
-                setTimeout(function () {
-
-                },12000);
+    function WelcomeDisplayText() {
+        setTimeout(function () {
+            $("#welcomePage .mdui-typo:nth-child(1)").hide(1000);
+            $("#welcomePage .mdui-typo:nth-child(2)").show(1000);
+        }, 1000);
+        setTimeout(function () {
+            $("#welcomePage .mdui-typo:nth-child(2)").hide(1000);
+            $("#welcomePage .mdui-typo:nth-child(3)").show(1000);
+            if (window.innerWidth > 1024) {
+                $(".mdui-drawer").removeClass("mdui-drawer-close");
+                $(".mdui-drawer").addClass("mdui-drawer-open");
             }
-            WelcomeDisplayText();
-            // setTimeout(function () {
-            //     window.location.href="index.html";
-            // },14500);
-    </script>
+        }, 4000);
+        setTimeout(function () {
+            $("#welcomePage .mdui-typo:nth-child(3)").hide(1000);
+            $("#welcomePage .mdui-typo:nth-child(4)").show(1000);
+        }, 7000);
+        setTimeout(function () {
+            $(".welcomeButton button").show(function () {
+                $(".welcomeButton button").animate({
+                    width: '50rem',
+                })
+            });
+
+        }, 8000);
+        setTimeout(function () {
+            $("#welcomePage .mdui-typo:nth-child(4)").hide(1000);
+            $("#welcomePage .mdui-typo:nth-child(5)").show(1000);
+        }, 10000);
+
+    }
+
+    WelcomeDisplayText();
+    // setTimeout(function () {
+    //     window.location.href="index.html";
+    // },14500);
+    // $(".welcomeButton button").hide();
+    document.onkeydown = function (event) {
+        var e = event || window.event || arguments.callee.caller.arguments[0];
+        if (e && e.keyCode == 13) { // enter 键
+            //要做的事情
+            $(".welcomeButton button").show(function () {
+                $(".welcomeButton button").animate({
+                    width: '50rem',
+                })
+            });
+            if (window.innerWidth > 1024) {
+                $(".mdui-drawer").removeClass("mdui-drawer-close");
+                $(".mdui-drawer").addClass("mdui-drawer-open");
+            };
+        }
+    };
+
+</script>
 </body>
 </html>

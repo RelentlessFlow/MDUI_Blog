@@ -252,3 +252,14 @@ ul{
     box-sizing: border-box;
     border: 0.2rem solid white;
 }
+
+.welcomeButton{
+    position: fixed;
+    right: 0;
+}
+.welcomeButton button{
+    height: 25rem;
+    width: 20rem;
+    display: block;
+    font-size: 3rem;
+}

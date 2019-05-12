@@ -347,5 +347,6 @@ $("#video_button_play").click(function () {
 
 #### 另外页面或多或少有点Bug，暂时没有精力修复。很多函数调用根本没法这个调那个，因为有线程和函数声明周期的锅，多线程和异步又不会，只能用定时器来凑。。。 
 ##### 另外代码托管在Gitee上，用户名为SpringWaterLikeMe
+https://gitee.com/SpringWaterLikeMe/PrivateBlog
 ### 后端：
 根本没有精力写。。。。准备用node.js

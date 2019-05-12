@@ -310,77 +310,161 @@ $(".mdui-toolbar .mdui-btn:nth-child(5)").after(
     "      <i class=\"mdui-menu-item-icon mdui-icon material-icons\">format_color_text</i>\n" +
     "      低调灰\n" +
     "    </a>\n" +
-    "  </li>\n"
+    "  </li>\n" +
+    "<li class=\"mdui-list-item mdui-ripple\">\n" +
+    "    <i class=\"mdui-list-item-icon mdui-icon material-icons\">image</i>\n" +
+    "    <div class=\"mdui-list-item-content\">沉浸模式</div>\n" +
+    "    <label class=\"mdui-switch\">\n" +
+    "      <input type=\"checkbox\" id='immersionMode' />\n" +
+    "      <i class=\"mdui-switch-icon\"></i>\n" +
+    "    </label>\n" +
+    "  </li>"
 );
 // 功能
 $("#theme-bottom-id li:nth-child(1)").click(function () {
-    $("body").removeClass("mdui-theme-layout-dark");
-    $("#theme-bottom-id #DaySwitch").hide();
-    document.getElementById("DarkSwitch").style.display = "block";
-    setTimeout("changeMask()", 100);
+    var immersionModeChecked = document.getElementById("immersionMode").checked;
+    if (immersionModeChecked === true){
+        mdui.snackbar({
+            message: '沉浸模式时无法切换到日间模式'
+        });
+    }else {
+        $("body").removeClass("mdui-theme-layout-dark");
+        $("#theme-bottom-id #DaySwitch").hide();
+        document.getElementById("DarkSwitch").style.display = "block";
+        setTimeout("changeMask()", 100);
+    }
 });
 
 $("#theme-bottom-id li:nth-child(2)").click(function () {
-    $("body").addClass("mdui-theme-layout-dark");
-    $("#theme-bottom-id #DarkSwitch").hide();
-    document.getElementById("DaySwitch").style.display = "block";
-    $(".color_card_mask").css("background-color", "#000");
+    var immersionModeChecked = document.getElementById("immersionMode").checked;
+    if (immersionModeChecked === true){
+        mdui.snackbar({
+            message: '沉浸模式时无法切换到日间模式'
+        });
+    }else {
+        $("body").addClass("mdui-theme-layout-dark");
+        $("#theme-bottom-id #DarkSwitch").hide();
+        document.getElementById("DaySwitch").style.display = "block";
+        $(".color_card_mask").css("background-color", "#000");
+    }
 });
 
 
 $("#theme-bottom-id li:nth-child(3)").click(function () {
+    $("#bgCarousel img").css("display","none");
+    $("#bgCarousel img:nth-child(1)").show();
     ChangThemeColor('red');
 });
 
 $("#theme-bottom-id li:nth-child(4)").click(function () {
+    $("#bgCarousel img").css("display","none");
+    $("#bgCarousel img:nth-child(2)").show();
     ChangThemeColor('pink');
 });
+
 $("#theme-bottom-id li:nth-child(5)").click(function () {
+    $("#bgCarousel img").css("display","none");
+    $("#bgCarousel img:nth-child(3)").show();
     ChangThemeColor('purple');
 });
+
 $("#theme-bottom-id li:nth-child(6)").click(function () {
+    $("#bgCarousel img").css("display","none");
+    $("#bgCarousel img:nth-child(4)").show();
     ChangThemeColor('indigo');
 });
 $("#theme-bottom-id li:nth-child(7)").click(function () {
+    $("#bgCarousel img").css("display","none");
+    $("#bgCarousel img:nth-child(5)").show();
     ChangThemeColor('blue');
 });
 $("#theme-bottom-id li:nth-child(8)").click(function () {
+    $("#bgCarousel img").css("display","none");
+    $("#bgCarousel img:nth-child(6)").show();
     ChangThemeColor('light-blue');
 });
 $("#theme-bottom-id li:nth-child(9)").click(function () {
+    $("#bgCarousel img").css("display","none");
+    $("#bgCarousel img:nth-child(7)").show();
     ChangThemeColor('cyan');
 });
 $("#theme-bottom-id li:nth-child(10)").click(function () {
+    $("#bgCarousel img").css("display","none");
+    $("#bgCarousel img:nth-child(8)").show();
     ChangThemeColor('teal');
 });
 $("#theme-bottom-id li:nth-child(11)").click(function () {
+    $("#bgCarousel img").css("display","none");
+    $("#bgCarousel img:nth-child(9)").show();
     ChangThemeColor('green');
 });
 $("#theme-bottom-id li:nth-child(12)").click(function () {
+    $("#bgCarousel img").css("display","none");
+    $("#bgCarousel img:nth-child(10)").show();
     ChangThemeColor('light-green');
 });
 $("#theme-bottom-id li:nth-child(13)").click(function () {
+    $("#bgCarousel img").css("display","none");
+    $("#bgCarousel img:nth-child(11)").show();
     ChangThemeColor('lime');
 });
 $("#theme-bottom-id li:nth-child(14)").click(function () {
+    $("#bgCarousel img").css("display","none");
+    $("#bgCarousel img:nth-child(12)").show();
     ChangThemeColor('yellow');
 });
 $("#theme-bottom-id li:nth-child(15)").click(function () {
+    $("#bgCarousel img").css("display","none");
+    $("#bgCarousel img:nth-child(13)").show();
     ChangThemeColor('orange');
 });
 $("#theme-bottom-id li:nth-child(16)").click(function () {
+    $("#bgCarousel img").css("display","none");
+    $("#bgCarousel img:nth-child(14)").show();
     ChangThemeColor('deep-orange');
 });
 $("#theme-bottom-id li:nth-child(17)").click(function () {
+    $("#bgCarousel img").css("display","none");
+    $("#bgCarousel img:nth-child(15)").show();
     ChangThemeColor('brown');
 });
 $("#theme-bottom-id li:nth-child(18)").click(function () {
+    $("#bgCarousel img").css("display","none");
+    $("#bgCarousel img:nth-child(16)").show();
     ChangThemeColor('grey');
 });
 $("#theme-bottom-id li:nth-child(19)").click(function () {
+    $("#bgCarousel img").css("display","none");
+    $("#bgCarousel img:nth-child(17)").show();
     ChangThemeColor('blue-grey');
 });
-// .mdui-theme-layout-dark
+$("#theme-bottom-id li:nth-child(20) input").click(function () {
+    if (document.getElementById("DaySwitch").style.display == "block"){
+        mdui.snackbar({
+            message: '注意：由于您的浏览器过低，夜间模式和沉浸模式无法同时设置，兼容性不佳，可能会影响您的使用体验'
+        });
+    }
+    var immersionModeChecked = document.getElementById("immersionMode").checked;
+    if (immersionModeChecked === true){
+        localStorage.setItem("themeSetting","1");
+        $(".bgCarouselMaks").css("display","inline");
+        $("#bgCarousel").show();
+        $("#bgCarousel img:last-child").show();
+        $("body").addClass("mdui-theme-layout-dark");
+        transparentMode();
+    }
+    if (immersionModeChecked === false){
+        localStorage.setItem("themeSetting","0");
+        $(".bgCarouselMaks").css("display","none");
+        $("#bgCarousel").hide();
+        $("body").removeClass("mdui-theme-layout-dark");
+        roveTransparentMode();
+    }
+});
+
+$(".bgCarouselMaks").css("display","none");
+
+
 
 
 // $("#theme-bottom-id #DarkSwitch").click(function () {
@@ -422,7 +506,7 @@ function ChangThemeColor(color) {
     $("body").removeClass(tempClass2);
     $("body").addClass(class1);
     $("body").addClass(class2);
-    setTimeout("changeMask()", 100);
+    changeMask();
 }
 
 //设置蒙版大小
@@ -438,6 +522,39 @@ setMaskSize();
 window.onresize = function () {
     setMaskSize();
 };
+
+
+
+// 沉浸模式透明函数
+function transparentMode(){
+    $(".mdui-appbar .mdui-toolbar").removeClass("mdui-color-theme");
+    $("#left-drawer .mdui-card").css("background-color","transparent");
+    $("#left-drawer .color_card_mask").css("opacity","0");
+    $("#left-drawer .mdui-list .mdui-card .mdui-card-media img").css("opacity","0.0");
+}
+//移除透明函数
+function roveTransparentMode(){
+    $(".mdui-appbar .mdui-toolbar").addClass("mdui-color-theme");
+    $("#left-drawer .color_card_mask").css("opacity","0.4");
+    $("#left-drawer .mdui-list .mdui-card .mdui-card-media img").css("opacity","1");
+}
+
+
+// localStorage 设置开始时主题颜色
+if (localStorage.getItem("themeSetting")==1){
+    defaultThemeMode();
+}
+function defaultThemeMode(){
+    $(".bgCarouselMaks").css("display","inline");
+    $("#bgCarousel").show();
+    $("#bgCarousel img:last-child").show();
+    $("body").addClass("mdui-theme-layout-dark");
+    transparentMode();
+    document.getElementById("immersionMode").click();
+}
+//$("#bgCarousel img").css("display","none");
+
+
 
 
 //3、大标题主页跳转
@@ -481,6 +598,8 @@ $("#printLocation").append("<div id=\"qrcode\"></div>");
     jQuery(function(){
     jQuery('#qrcode').qrcode(window.location.href);
 });
+
+
 
 
 

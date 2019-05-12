@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Document</title>
+    <link href="css/mdui.css" rel="stylesheet">
+    <link href=“https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel=”stylesheet“>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="mdui-bottom-nav-fixed mdui-drawer-body-left mdui-bottom-nav-fixed">
+
+<!--顶部导航栏-->
+<div class="mdui-appbar mdui-appbar-fixed">
+    <div class="mdui-toolbar">
+        <!--绑定侧边栏事件-->
+        <a class="mdui-btn mdui-btn-icon" href="javascript:" mdui-drawer="{target: '#left-drawer'}"><i
+                class="mdui-icon material-icons">menu</i></a>
+
+        <a class="mdui-typo-headline" href="javascript:">The Blog Of SpringWaterLikeMe</a>
+        <div class="mdui-toolbar-spacer"></div>
+
+        <a class="mdui-btn mdui-btn-icon" href="javascript:onclick(window.location.reload())"><i
+                class="mdui-icon material-icons">refresh</i></a>
+        <a class="mdui-btn mdui-btn-icon" href="javascript:" mdui-dialog="{target: '#shareButton'}"><i
+                class="mdui-icon material-icons">share</i></a>
+        <button class="mdui-btn mdui-color-theme-accent mdui-ripple" onclick="window.location.href='login.html'"
+                style="opacity: 0.4">登录
+        </button>
+        <button class="mdui-btn mdui-ripple" onclick="window.location.href='register.html'">注册</button>
+    </div>
+</div>
+
+
+<!--侧边栏-->
+<div class="mdui-drawer mdui-drawer-close" id="left-drawer">
+    <ul class="mdui-list">
+        <li style="padding-top: 8rem"></li>
+        <li class="mdui-list-item mdui-ripple mdui-m-t-1">
+            <i class="mdui-list-item-icon mdui-icon material-icons">home</i>
+            <div class="mdui-list-item-content">主页</div>
+        </li>
+        <li class="mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">contacts</i>
+            <div class="mdui-list-item-content">关于</div>
+        </li>
+        <li class="mdui-subheader">科技</li>
+        <li class="mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">video_library</i>
+            <div class="mdui-list-item-content">视频</div>
+        </li>
+        <li class="mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">book</i>
+            <div class="mdui-list-item-content">文章</div>
+        </li>
+        <li class="mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">linked_camera</i>
+            <div class="mdui-list-item-content">摄影</div>
+        </li>
+        <li class="mdui-subheader">开发</li>
+        <li class="mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">note</i>
+            <div class="mdui-list-item-content">随笔</div>
+        </li>
+        <li class="mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">computer</i>
+            <div class="mdui-list-item-content">项目展示</div>
+        </li>
+        <li class="mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">layers</i>
+            <div class="mdui-list-item-content">开源库</div>
+        </li>
+    </ul>
+</div>
+
+
+<!--主体内容-->
+<div class="mdui-container" id="welcomePage">
+    <div class="bgPic"></div>
+
+    <div class="mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-6 mdui-col-lg-6 mdui-xl-6">
+        <div class="mdui-typo">
+            <div class="mdui-typo-display-4">Hello!</div>
+        </div>
+        <div class="mdui-typo">
+            <div class="mdui-typo-display-4">I'm WildPlants.</div>
+        </div>
+        <div class="mdui-typo">
+            <div class="mdui-typo-display-4">This is my private blog.</div>
+        </div>
+        <div class="mdui-typo">
+            <div class="mdui-typo-display-4">My friend.</div>
+        </div>
+        <div class="mdui-typo">
+            <div class="mdui-typo-display-4">Welcome!</div>
+        </div>
+    </div>
+
+
+
+        <div class="mdui-dialog" id="shareButton">
+            <div class="mdui-dialog-title">请您复制到剪切板后手动发送</div>
+            <div class="mdui-dialog-content" id="printLocation"></div>
+            <div class="mdui-dialog-actions">
+                <button class="mdui-btn mdui-ripple" mdui-dialog-close>确定</button>
+                <button class="mdui-btn mdui-ripple" mdui-dialog-confirm onclick="CopyLocation()">复制到剪切板</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.4.0.min.js"></script>
+    <script src="js/mdui.js"></script>
+    <script src="js/jquery.qrcode.min.js"></script>
+    <script src="js/returnTop.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+
+            $("#welcomePage .mdui-typo:not(:first)").hide();
+            // $("#welcomePage .mdui-typo:nth-child(1)").onclick=WelcomeTextDisplay(1);
+            // $("#welcomePage .mdui-typo:nth-child(2)").onclick=WelcomeTextDisplay(2);
+            // $("#welcomePage .mdui-typo:nth-child(3)").onclick=WelcomeTextDisplay(3);
+            // $("#welcomePage .mdui-typo:nth-child(4)").onclick=WelcomeTextDisplay(4);
+
+            function WelcomeDisplayText(){
+                setTimeout(function () {
+                    $("#welcomePage .mdui-typo:nth-child(1)").hide(1000);
+                    $("#welcomePage .mdui-typo:nth-child(2)").show(1000);
+                },1000);
+                setTimeout(function () {
+                    $("#welcomePage .mdui-typo:nth-child(2)").hide(1000);
+                    $("#welcomePage .mdui-typo:nth-child(3)").show(1000);
+                    if (window.innerWidth>1024){
+                        $(".mdui-drawer").removeClass("mdui-drawer-close");
+                        $(".mdui-drawer").addClass("mdui-drawer-open");
+                    }
+                },4000);
+                setTimeout(function () {
+                    $("#welcomePage .mdui-typo:nth-child(3)").hide(1000);
+                    $("#welcomePage .mdui-typo:nth-child(4)").show(1000);
+                },7000);
+                setTimeout(function () {
+                    $("#welcomePage .mdui-typo:nth-child(4)").hide(1000);
+                    $("#welcomePage .mdui-typo:nth-child(5)").show(1000);
+                },10000);
+                setTimeout(function () {
+
+                },12000);
+            }
+            WelcomeDisplayText();
+            setTimeout(function () {
+                window.location.href="index.html";
+            },14500);
+
+    </script>
+</body>
+</html>

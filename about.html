@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Document</title>
+    <link href="css/mdui.css" rel="stylesheet">
+    <link href = “https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css"  rel = ”stylesheet“ >
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/share.min.css">
+</head>
+<body class="mdui-bottom-nav-fixed mdui-drawer-body-left mdui-bottom-nav-fixed">
+
+
+<!--侧边栏-->
+<div class="mdui-appbar mdui-appbar-fixed">
+    <div class="mdui-toolbar mdui-color-theme">
+        <!--绑定侧边栏事件-->
+        <a class="mdui-btn mdui-btn-icon" href="javascript:" mdui-drawer="{target: '#left-drawer'}"><i
+                class="mdui-icon material-icons">menu</i></a>
+
+        <a class="mdui-typo-headline" href="javascript:">The Blog Of SpringWaterLikeMe</a>
+        <div class="mdui-toolbar-spacer"></div>
+
+        <a class="mdui-btn mdui-btn-icon" href="javascript:onclick(window.location.reload())" ><i class="mdui-icon material-icons">refresh</i></a>
+        <a class="mdui-btn mdui-btn-icon" href="javascript:" mdui-dialog="{target: '#shareButton'}"><i class="mdui-icon material-icons">share</i></a>
+        <button onclick="window.location.href='login.html'" class="mdui-btn mdui-color-theme-accent mdui-ripple">登录</button>
+        <button onclick="window.location.href='register.html'" class="mdui-btn mdui-ripple">注册</button>
+    </div>
+</div>
+
+
+
+<!--侧边栏-->
+<div class="mdui-drawer" id="left-drawer">
+    <ul class="mdui-list">
+        <div class="mdui-card">
+            <div class="mdui-card-media">
+                <div class="color_card_mask mdui-color-theme "></div>
+                <img src="image/MainSection.png">
+                <div class="mdui-card-media-covered">
+                    <div class="mdui-card-primary">
+                        <div class="mdui-card-primary-title">流水吾情</div>
+                        <div class="mdui-card-primary-subtitle">苦逼大一狗</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <li class="mdui-list-item mdui-ripple mdui-m-t-1">
+            <i class="mdui-list-item-icon mdui-icon material-icons">home</i>
+            <div class="mdui-list-item-content">主页</div>
+        </li>
+        <li class="mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">contacts</i>
+            <div class="mdui-list-item-content">关于</div>
+        </li>
+        <li class="mdui-subheader">科技</li>
+        <li class="mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">video_library</i>
+            <div class="mdui-list-item-content">视频</div>
+        </li>
+        <li class="mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">book</i>
+            <div class="mdui-list-item-content">文章</div>
+        </li>
+        <li class="mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">linked_camera</i>
+            <div class="mdui-list-item-content">摄影</div>
+        </li>
+        <li class="mdui-subheader">开发</li>
+        <li class="mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">note</i>
+            <div class="mdui-list-item-content">随笔</div>
+        </li>
+        <li class="mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">computer</i>
+            <div class="mdui-list-item-content">项目展示</div>
+        </li>
+        <li class="mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">layers</i>
+            <div class="mdui-list-item-content">开源库</div>
+        </li>
+    </ul>
+</div>
+
+
+
+<!--主体内容-->
+<div class="mdui-container">
+    <!--    <img src="image/HomePic1.jpg" alt="" class="mdui-img-fluid home-bg-pic1">-->
+    <!--    <div class="mdui-valign mdui-typo mdui-text-color-black-text">-->
+    <!--        <h1 class="mdui-center">荆轲刺秦王</h1>-->
+    <!--    </div>-->
+    <div class="card-blank"></div>
+    <div class="mdui-card about-card">
+        <div class="mdui-card-primary ">
+            <div class="mdui-card-primary-title">
+                <a class="mdui-text-color-theme-accent" href="#">关于</a>
+            </div>
+            <div class="mdui-card-primary-subtitle">April 23, 2019</div>
+        </div>
+        <div class="mdui-card-content mdui-typo">
+            <h2>关于我：</h2>
+            <p>一个有梦想、不惹人喜欢、倔强不屈的理想主义者，Android爱好者，苦逼学生狗。</p>
+            <p>极度喜欢自嘲，常常看着IDE发呆，看着代码从我手中流过，极度自嗨。不受人待见，兴趣爱好行为方式甚至是思想都无法被常人理解的堕落大一狗。
+                <br>极度在乎他人意见，死要面子爱受罪，经常活跃在各种开源社区以及技术论坛，
+                <br>喜欢摄影，喜欢数码，一到双11各种DIY设备必读少不了剁手，常常剁到倾家荡产，靠泡面配榨菜度过余生。</p>
+            <h2>联系我：</h2>
+            E-mail：<em><a href="mailto:1021859082@qq.com">1021859082@qq.com</a></em><br>
+            GitHub：<em><a href="https://github.com/1021859082">1021859082</a></em><br>
+            Gitee：<em><a href="https://gitee.com/SpringWaterLikeMe">SpringWaterLikeMe</a></em><br>
+            CSDN：<em><a href="https://i.csdn.net">qq_36833171</a></em>
+        </div>
+    </div>
+
+
+<!--    分享弹窗-->
+    <div class="mdui-dialog" id="shareButton">
+        <div class="mdui-dialog-title">请您复制到剪切板后手动发送</div>
+        <div class="mdui-dialog-content" id="printLocation"></div>
+        <div class="mdui-dialog-actions">
+            <button class="mdui-btn mdui-ripple" mdui-dialog-close>确定</button>
+            <button class="mdui-btn mdui-ripple" onclick="CopyLocation()" mdui-dialog-confirm>复制到剪切板</button>
+        </div>
+    </div>
+</div>
+
+
+<!--底部向上-->
+<div class="mdui-fab mdui-radio mdui-fab-fixed mdui-color-theme-accent" id="btn">
+    <i class="mdui-icon material-icons">arrow_upward</i>
+</div>
+
+
+<script src="js/jquery-3.4.0.min.js"></script>
+<script src="js/mdui.js"></script>
+<script src="js/jquery.qrcode.min.js"></script>
+<script src="js/returnTop.js"></script>
+<script src="js/social-share.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+
+</script>
+</body>
+</html>

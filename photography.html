@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Document</title>
+    <link href="css/mdui.css" rel="stylesheet">
+    <link href = “https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css"  rel = ”stylesheet“ >
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/viewer.min.css">
+</head>
+<body class="mdui-bottom-nav-fixed mdui-drawer-body-left mdui-bottom-nav-fixed">
+
+<!--顶部导航栏-->
+<div class="mdui-appbar mdui-appbar-fixed">
+    <div class="mdui-toolbar mdui-color-theme">
+        <!--绑定侧边栏事件-->
+        <a class="mdui-btn mdui-btn-icon" href="javascript:" mdui-drawer="{target: '#left-drawer'}"><i
+                class="mdui-icon material-icons">menu</i></a>
+
+        <a class="mdui-typo-headline" href="javascript:">The Blog Of SpringWaterLikeMe</a>
+        <div class="mdui-toolbar-spacer"></div>
+
+        <a class="mdui-btn mdui-btn-icon" href="javascript:onclick(window.location.reload())" ><i class="mdui-icon material-icons">refresh</i></a>
+        <a class="mdui-btn mdui-btn-icon" href="javascript:" mdui-dialog="{target: '#shareButton'}"><i class="mdui-icon material-icons">share</i></a>
+        <button onclick="window.location.href='login.html'" class="mdui-btn mdui-color-theme-accent mdui-ripple">登录</button>
+        <button onclick="window.location.href='register.html'" class="mdui-btn mdui-ripple">注册</button>
+    </div>
+</div>
+
+
+
+<!--侧边栏-->
+<div class="mdui-drawer" id="left-drawer">
+    <ul class="mdui-list">
+        <div class="mdui-card">
+            <div class="mdui-card-media">
+                <div class="color_card_mask mdui-color-theme "></div>
+                <img src="image/MainSection.png">
+                <div class="mdui-card-media-covered">
+                    <div class="mdui-card-primary">
+                        <div class="mdui-card-primary-title">流水吾情</div>
+                        <div class="mdui-card-primary-subtitle">苦逼大一狗</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <li class="mdui-list-item mdui-ripple mdui-m-t-1">
+                <i class="mdui-list-item-icon mdui-icon material-icons">home</i>
+                <div class="mdui-list-item-content">主页</div>
+            </li>
+        <li class="mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">contacts</i>
+            <div class="mdui-list-item-content">关于</div>
+        </li>
+        <li class="mdui-subheader">科技</li>
+        <li class="mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">video_library</i>
+            <div class="mdui-list-item-content">视频</div>
+        </li>
+        <li class="mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">book</i>
+            <div class="mdui-list-item-content">文章</div>
+        </li>
+        <li class="mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">linked_camera</i>
+            <div class="mdui-list-item-content">摄影</div>
+        </li>
+        <li class="mdui-subheader">开发</li>
+        <li class="mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">note</i>
+            <div class="mdui-list-item-content">随笔</div>
+        </li>
+        <li class="mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">computer</i>
+            <div class="mdui-list-item-content">项目展示</div>
+        </li>
+        <li class="mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">layers</i>
+            <div class="mdui-list-item-content">开源库</div>
+        </li>
+    </ul>
+</div>
+
+
+
+
+<!--主体内容-->
+<div class="mdui-container">
+    <div class="mdui-text-color-theme mdui-typo page-title mdui-m-l-2 mdui-p-t-1"><h1>摄影</h1></div>
+
+    <div class="mdui-card mdui-col-xs-12 mdui-col-lg-12 mdui-col-md-12 mdui-col-lg-12 mdui-col-xl-12" style="padding-top: 0.5rem;padding-bottom:0.5rem">
+        <div class="mdui-card-media">
+            <ul id="photography-gallery" class="mdui-ripple">
+                <li class="mdui-col-xs-12 mdui-col-lg-4 mdui-col-md-4 mdui-col-lg-4 mdui-col-xl-4"><img src="https://s2.ax1x.com/2019/05/11/EWToyn.jpg" alt="EWToyn.jpg" border="0"></li>
+                <li class="mdui-col-xs-12 mdui-col-lg-4 mdui-col-md-4 mdui-col-lg-4 mdui-col-xl-4"><img src="https://s2.ax1x.com/2019/05/11/EWT2o8.jpg" alt="EWT2o8.jpg" border="0"></li>
+                <li class="mdui-col-xs-12 mdui-col-lg-4 mdui-col-md-4 mdui-col-lg-4 mdui-col-xl-4"><img src="https://s2.ax1x.com/2019/05/11/EWTTLq.jpg" alt="EWTTLq.jpg" border="0"></li>
+                <li class="mdui-col-xs-12 mdui-col-lg-4 mdui-col-md-4 mdui-col-lg-4 mdui-col-xl-4"><img src="https://s2.ax1x.com/2019/05/11/EWTHe0.jpg" alt="EWTHe0.jpg" border="0"></li>
+                <li class="mdui-col-xs-12 mdui-col-lg-4 mdui-col-md-4 mdui-col-lg-4 mdui-col-xl-4"><img src="https://s2.ax1x.com/2019/05/11/EWTWFS.jpg" alt="EWTWFS.jpg" border="0"></li>
+                <li class="mdui-col-xs-12 mdui-col-lg-4 mdui-col-md-4 mdui-col-lg-4 mdui-col-xl-4"><img src="https://s2.ax1x.com/2019/05/11/EWTqoT.jpg" alt="EWTqoT.jpg" border="0"></li>
+                <li class="mdui-col-xs-12 mdui-col-lg-4 mdui-col-md-4 mdui-col-lg-4 mdui-col-xl-4"><img src="https://s2.ax1x.com/2019/05/11/EWTxSJ.jpg" alt="EWTxSJ.jpg" border="0"></li>
+                <li class="mdui-col-xs-12 mdui-col-lg-4 mdui-col-md-4 mdui-col-lg-4 mdui-col-xl-4"><img src="https://s2.ax1x.com/2019/05/11/EWTzl9.jpg" alt="EWTzl9.jpg" border="0"></li>
+                <li class="mdui-col-xs-12 mdui-col-lg-4 mdui-col-md-4 mdui-col-lg-4 mdui-col-xl-4"><img src="https://s2.ax1x.com/2019/05/11/EW7Cex.jpg" alt="EW7Cex.jpg" border="0"></li>
+                <li class="mdui-col-xs-12 mdui-col-lg-4 mdui-col-md-4 mdui-col-lg-4 mdui-col-xl-4"><img src="https://s2.ax1x.com/2019/05/11/EWTOFU.jpg" alt="EWTOFU.jpg" border="0"></li>
+                <li class="mdui-col-xs-12 mdui-col-lg-4 mdui-col-md-4 mdui-col-lg-4 mdui-col-xl-4"><img src="https://s2.ax1x.com/2019/05/11/EW7kFO.jpg" alt="EW7kFO.jpg" border="0"></li>
+                <li class="mdui-col-xs-12 mdui-col-lg-4 mdui-col-md-4 mdui-col-lg-4 mdui-col-xl-4"><img src="https://s2.ax1x.com/2019/05/11/EW7iTK.jpg" alt="EW7iTK.jpg" border="0"></li>
+                <li class="mdui-col-xs-12 mdui-col-lg-4 mdui-col-md-4 mdui-col-lg-4 mdui-col-xl-4"><img src="https://s2.ax1x.com/2019/05/11/EW7ZSH.jpg" alt="EW7ZSH.jpg" border="0"></li>
+                <li class="mdui-col-xs-12 mdui-col-lg-4 mdui-col-md-4 mdui-col-lg-4 mdui-col-xl-4"></li>
+                <li class="mdui-col-xs-12 mdui-col-lg-4 mdui-col-md-4 mdui-col-lg-4 mdui-col-xl-4"></li>
+                <li class="mdui-col-xs-12 mdui-col-lg-4 mdui-col-md-4 mdui-col-lg-4 mdui-col-xl-4"></li>
+                <li class="mdui-col-xs-12 mdui-col-lg-4 mdui-col-md-4 mdui-col-lg-4 mdui-col-xl-4"></li>
+                <li class="mdui-col-xs-12 mdui-col-lg-4 mdui-col-md-4 mdui-col-lg-4 mdui-col-xl-4"></li>
+            </ul>
+        </div>
+    </div>
+
+
+<!--    分享对话框    -->
+    <div class="mdui-dialog" id="shareButton">
+        <div class="mdui-dialog-title">请您复制到剪切板后手动发送</div>
+        <div class="mdui-dialog-content" id="printLocation"></div>
+        <div class="mdui-dialog-actions">
+            <button class="mdui-btn mdui-ripple" mdui-dialog-close>确定</button>
+            <button class="mdui-btn mdui-ripple" onclick="CopyLocation()" mdui-dialog-confirm>复制到剪切板</button>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="mdui-fab mdui-radio mdui-fab-fixed mdui-color-theme-accent" id="btn">
+    <i class="mdui-icon material-icons">arrow_upward</i>
+</div>
+<script src="js/jquery-3.4.0.min.js"></script>
+<script src="js/mdui.js"></script>
+<script src="js/viewer.min.js"></script>
+<script src="js/shuffle.min.js"></script>
+<script src="js/jquery.qrcode.min.js"></script>
+<script src="js/returnTop.js"></script>
+<script src="js/main.js"></script>
+<script>
+    //Viewer插件调用
+    new Viewer(document.getElementById("photography-gallery"));
+</script>
+</body>
+</html>

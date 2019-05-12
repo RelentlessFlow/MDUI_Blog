@@ -1,0 +1,248 @@
+.mdui-drawer {
+    top: 64px;
+}
+/*判断是否为平板设备、判断手机横屏，隐藏上边距以及*/
+@media screen and (max-width: 1000px){
+    .mdui-drawer {
+        top: 0;
+    }
+    .mdui-drawer .mdui-list{
+        padding-top: 0;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .mdui-drawer {
+        top: 0;
+    }
+    .mdui-drawer .mdui-list{
+        padding-top: 0;
+    }
+    .mdui-appbar .mdui-toolbar .mdui-btn:nth-child(2),.mdui-btn:nth-child(3),.mdui-btn:nth-child(4),.mdui-btn:nth-child(6){
+        display: none;
+    }
+    .mdui-appbar .mdui-toolbar .mdui-typo-headline{
+        display: none;
+    }
+    .mobile-title h1{
+        margin-top: 0.8rem;
+    }
+    .mobile-title .mdui-typo .mdui-chip{
+        display: none;
+    }
+    .mdui-container .card-blank {
+        padding-top: 4rem;
+    }
+}
+
+.mobile-title .mdui-typo .mdui-chip{
+    margin-right: 3rem;
+    margin-top:3rem;
+}
+
+.mdui-card-primary {
+    padding: 8px 16px 8px 16px;
+}
+
+.mobile-title h1{
+    font-weight: 900;
+    font-style: italic;
+}
+
+.mdui-list {
+    padding-top: 4px;
+}
+
+.mdui-container {
+    margin-top: 64px;
+}
+
+.home-bg-pic1 {
+    z-index: 0;
+}
+
+.mdui-container .card-blank {
+    padding-top: 1.5rem;
+}
+
+.mdui-card a {
+    text-decoration: none;
+}
+
+.mdui-card-primary {
+    padding: 24px 16px 16px 16px;
+}
+
+
+#video_button_play{
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    width: 6rem;
+    height: 6rem;
+    margin-right: -3rem;
+    margin-top: -3rem;
+}
+#video_button_play .mdui-icon{
+    position: relative;
+    font-size: 6rem;
+    line-height: 5rem;
+    text-align: center;
+    width: 6rem;
+    height: 6rem;
+    margin-top: 0.5rem;
+    opacity: 0.8;
+}
+
+ul{
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+#photography-gallery li{
+    padding: 0;
+    margin: 0;
+}
+.mdui-container .mdui-card-media{
+    padding: 0;
+}
+
+.mdui-card .mdui-card-content{
+    padding-bottom: 0;
+}
+
+.mdui-card .mdui-card-primary{
+    padding-left: 2.2rem;
+    padding-top: 2rem;
+}
+
+.mdui-card-primary-subtitle{
+    padding-top: 1rem;
+}
+
+.about-card .mdui-card-content{
+    padding-left: 3rem;
+    padding-bottom: 2rem;
+}
+
+#photography-gallery li{
+}
+#photography-gallery li:hover{
+
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+    .mdui-card .mdui-card-primary{
+        padding-top: 0.8rem;
+        padding-left: 1rem;
+        padding-bottom: 0.2rem;
+    }
+    .mdui-card-primary-title{
+        font-size: 1.1rem;
+    }
+    .mdui-card-primary-subtitle{
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+    }
+    .about-card .mdui-card-content{
+        padding-left: 1rem;
+    }
+    #photography-gallery li{
+        padding: 0.4rem;
+        width: 100%;
+    }
+}
+.mdui-card-media-covered{
+}
+.color_card_mask{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.4;
+}
+
+
+/*background-color: #0d47a1;*/
+/*opacity: 0.4;*/
+
+
+
+
+
+/*Welcome.html*/
+#welcomePage .bgPic{
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    background-image: url("../image/bgPic.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+}
+#welcomePage .mdui-typo-display-4{
+    position: fixed;
+    top: 20rem;
+    left: 30rem;
+}
+@media screen and (max-width: 600px) {
+    #welcomePage .mdui-typo-display-4{
+        font-size: 3rem;
+        position: fixed;
+        top: 18rem;
+        left: 3rem;
+    }
+}
+@media screen and (max-width: 10240px) {
+    #welcomePage .mdui-typo-display-4{
+        font-size: 5rem;
+        position: fixed;
+        top: 25rem;
+        left: 6rem
+    }
+}
+
+
+/*index.html*/
+.index-card-photo-title h1{
+    font-style: italic;
+    font-weight:300;
+    margin-top: 1.2rem;
+}
+.index-card-photo-title span{
+    display: block;
+    font-size: 1.7rem;
+    line-height: 1.9rem;
+    font-style: italic;
+    font-weight:300;
+}
+@media screen and (max-width: 600px){
+    .index-card-photo-title .mdui-card-media{
+        width: 100%;
+    }
+    .index-card-photo-title .mdui-card-primary .mdui-typo span{
+        display: none;
+    }
+    .index-card-photo-title .mdui-card-primary .mdui-typo h1{
+        width: 10rem;
+    }
+}
+@media screen and (max-width: 1024px){
+    .index-card-photo-title .mdui-card-primary{
+        padding-left: 20px;
+        padding-top: 0px;
+    }
+}
+
+
+
+/*photography.html*/
+#photography-gallery li{
+    box-sizing: border-box;
+    border: 0.2rem solid white;
+}

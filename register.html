@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Document</title>
+    <link href="css/mdui.css" rel="stylesheet">
+    <link href=“https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel=”stylesheet“>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<!--body设置整体布局和配色-->
+<body class="mdui-bottom-nav-fixed mdui-drawer-body-left mdui-bottom-nav-fixed">
+<div class="mdui-appbar mdui-appbar-fixed">
+    <div class="mdui-toolbar mdui-color-theme">
+        <!--绑定侧边栏事件-->
+        <a class="mdui-btn mdui-btn-icon" href="javascript:" mdui-drawer="{target: '#left-drawer'}"><i
+                class="mdui-icon material-icons">menu</i></a>
+
+        <a class="mdui-typo-headline" href="javascript:">The Blog Of SpringWaterLikeMe</a>
+        <div class="mdui-toolbar-spacer"></div>
+
+        <a class="mdui-btn mdui-btn-icon" href="javascript:onclick(window.location.reload())"><i
+                class="mdui-icon material-icons">refresh</i></a>
+        <a class="mdui-btn mdui-btn-icon" href="javascript:" mdui-dialog="{target: '#shareButton'}"><i
+                class="mdui-icon material-icons">share</i></a>
+        <button class="mdui-btn mdui-color-theme-accent mdui-ripple" onclick="window.location.href='login.html'">登录
+        </button>
+    </div>
+</div>
+
+<!--侧边栏-->
+<div class="mdui-drawer" id="left-drawer">
+    <ul class="mdui-list">
+        <div class="mdui-card">
+            <div class="mdui-card-media">
+                <div class="color_card_mask mdui-color-theme "></div>
+                <img src="image/MainSection.png">
+                <div class="mdui-card-media-covered">
+                    <div class="mdui-card-primary">
+                        <div class="mdui-card-primary-title">流水吾情</div>
+                        <div class="mdui-card-primary-subtitle">苦逼大一狗</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <li class="mdui-list-item mdui-ripple mdui-m-t-1">
+            <i class="mdui-list-item-icon mdui-icon material-icons">home</i>
+            <div class="mdui-list-item-content">主页</div>
+        </li>
+        <li class="mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">contacts</i>
+            <div class="mdui-list-item-content">关于</div>
+        </li>
+        <li class="mdui-subheader">科技</li>
+        <li class="mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">video_library</i>
+            <div class="mdui-list-item-content">视频</div>
+        </li>
+        <li class="mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">book</i>
+            <div class="mdui-list-item-content">文章</div>
+        </li>
+        <li class="mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">linked_camera</i>
+            <div class="mdui-list-item-content">摄影</div>
+        </li>
+        <li class="mdui-subheader">开发</li>
+        <li class="mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">note</i>
+            <div class="mdui-list-item-content">随笔</div>
+        </li>
+        <li class="mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">computer</i>
+            <div class="mdui-list-item-content">项目展示</div>
+        </li>
+        <li class="mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">layers</i>
+            <div class="mdui-list-item-content">开源库</div>
+        </li>
+    </ul>
+</div>
+
+
+<div class="mdui-container">
+    <div class="card-blank"></div>
+    <div class="card-blank"></div>
+    <div class="card-blank"></div>
+    <!--    注册界面-->
+    <div class="mdui-card mdui-p-t-5 mdui-p-l-5 mdui-p-b-5 mdui-p-r-5">
+        <div class="mdui-card-header">
+            <div class="mdui-typo">
+                <div class="mdui-card-header-title" style="margin-left: 0;margin-top: -8px"><div class="mdui-typo"><h2 class="mdui-m-t-0 mdui-m-b-0">欢迎注册博客账号</h2></div>
+                </div>
+                <div class="mdui-card-header-subtitle mdui-m-l-2 mdui-m-t-2">欢迎加入成为博客论坛的一员！</div>
+            </div>
+
+        </div>
+        <div class="mdui-textfield mdui-m-t-5">
+            <i class="mdui-icon material-icons">account_circle</i>
+            <label class="mdui-textfield-label">用户名</label>
+            <input class="mdui-textfield-input" required type="text"/>
+            <div class="mdui-textfield-error">用户名不能为空</div>
+        </div>
+
+        <div class="mdui-textfield">
+            <i class="mdui-icon material-icons">email</i>
+            <label class="mdui-textfield-label">Email</label>
+            <input class="mdui-textfield-input" required type="text"/>
+            <div class="mdui-textfield-error">邮箱格式错误</div>
+        </div>
+
+        <div class="mdui-textfield">
+            <i class="mdui-icon material-icons">keyboard</i>
+            <label class="mdui-textfield-label">密码</label>
+            <input class="mdui-textfield-input" pattern="^.*(?=.{6,})(?=.*[a-z])(?=.*[A-Z]).*$" required type="password"/>
+            <div class="mdui-textfield-error">密码至少 6 位，且包含大小写字母</div>
+            <div class="mdui-textfield-helper">请输入至少 6 位，且包含大小写字母的密码</div>
+        </div>
+        <div class="mdui-textfield">
+            <i class="mdui-icon material-icons">phone_iphone</i>
+            <label class="mdui-textfield-label">手机号</label>
+            <input class="mdui-textfield-input" pattern="^1[3|4|5|7|8][0-9]{9}$" required type="password"/>
+            <div class="mdui-textfield-error">电话号码不加“+86”前缀，直接填写11位手机号</div>
+            <div class="mdui-textfield-helper">请填写正确的中国地区11位手机号</div>
+        </div>
+        <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent mdui-float-right mdui-m-t-3">提交</button>
+    </div>
+
+    <!--    分享弹窗-->
+    <div class="mdui-dialog" id="shareButton">
+        <div class="mdui-dialog-title">请您复制到剪切板后手动发送</div>
+        <div class="mdui-dialog-content" id="printLocation"></div>
+        <div class="mdui-dialog-actions">
+            <button class="mdui-btn mdui-ripple" mdui-dialog-close>确定</button>
+            <button class="mdui-btn mdui-ripple" mdui-dialog-confirm onclick="CopyLocation()">复制到剪切板</button>
+        </div>
+    </div>
+</div>
+
+<!--底部向上-->
+<div class="mdui-fab mdui-radio mdui-fab-fixed mdui-color-theme-accent" id="btn">
+    <i class="mdui-icon material-icons">arrow_upward</i>
+</div>
+<script src="js/jquery-3.4.0.min.js"></script>
+<script src="js/mdui.js"></script>
+<script src="js/jquery.qrcode.min.js"></script>
+<script src="js/returnTop.js"></script>
+<script src="js/main.js"></script>
+<script src="js/social-share.min.js"></script>
+<script>
+
+</script>
+</body>
+</html>

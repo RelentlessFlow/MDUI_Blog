@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Document</title>
+    <link href="css/mdui.css" rel="stylesheet">
+    <link href = “https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css"  rel = ”stylesheet“ >
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="mdui-bottom-nav-fixed mdui-drawer-body-left mdui-bottom-nav-fixed">
+
+<!--顶部导航栏-->
+<div class="mdui-appbar mdui-appbar-fixed">
+    <div class="mdui-toolbar mdui-color-theme">
+        <!--绑定侧边栏事件-->
+        <a class="mdui-btn mdui-btn-icon" href="javascript:" mdui-drawer="{target: '#left-drawer'}"><i
+                class="mdui-icon material-icons">menu</i></a>
+
+        <a class="mdui-typo-headline" href="javascript:">The Blog Of SpringWaterLikeMe</a>
+        <div class="mdui-toolbar-spacer"></div>
+
+        <a class="mdui-btn mdui-btn-icon" href="javascript:onclick(window.location.reload())" ><i class="mdui-icon material-icons">refresh</i></a>
+        <a class="mdui-btn mdui-btn-icon" href="javascript:" mdui-dialog="{target: '#shareButton'}"><i class="mdui-icon material-icons">share</i></a>
+        <button onclick="window.location.href='login.html'" class="mdui-btn mdui-color-theme-accent mdui-ripple">登录</button>
+        <button onclick="window.location.href='register.html'" class="mdui-btn mdui-ripple">注册</button>
+    </div>
+</div>
+
+
+
+<!--侧边栏-->
+<div class="mdui-drawer" id="left-drawer">
+    <ul class="mdui-list">
+        <div class="mdui-card">
+            <div class="mdui-card-media">
+                <div class="color_card_mask mdui-color-theme "></div>
+                <img src="image/MainSection.png">
+                <div class="mdui-card-media-covered">
+                    <div class="mdui-card-primary">
+                        <div class="mdui-card-primary-title">流水吾情</div>
+                        <div class="mdui-card-primary-subtitle">苦逼大一狗</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="index.html">
+            <li class="mdui-list-item mdui-ripple mdui-m-t-1">
+                <i class="mdui-list-item-icon mdui-icon material-icons">home</i>
+                <div class="mdui-list-item-content">主页</div>
+            </li>
+        </a>
+        <li class="mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">contacts</i>
+            <div class="mdui-list-item-content">关于</div>
+        </li>
+        <li class="mdui-subheader">科技</li>
+        <li class="mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">video_library</i>
+            <div class="mdui-list-item-content">视频</div>
+        </li>
+        <li class="mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">book</i>
+            <div class="mdui-list-item-content">文章</div>
+        </li>
+        <li class="mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">linked_camera</i>
+            <div class="mdui-list-item-content">摄影</div>
+        </li>
+        <li class="mdui-subheader">开发</li>
+        <li class="mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">note</i>
+            <div class="mdui-list-item-content">随笔</div>
+        </li>
+        <li class="mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">computer</i>
+            <div class="mdui-list-item-content">项目展示</div>
+        </li>
+        <li class="mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">layers</i>
+            <div class="mdui-list-item-content">开源库</div>
+        </li>
+    </ul>
+</div>
+
+
+
+
+<!--主体内容-->
+<div class="mdui-container">
+    <div class="mdui-text-color-theme mdui-typo page-title mdui-m-l-2 mdui-p-t-1">
+        <h1>文章</h1>
+    </div>
+    <div class="card-blank"></div>
+    <div class="mdui-card mdui-ripple">
+        <div class="mdui-card-primary mdui-col-xs-12 mdui-col-lg-5 mdui-col-md-5 mdui-col-lg-5 mdui-col-xl-5">
+            <div class="mdui-card-primary-title .mdui-text-truncate">联想Ideapad720s-13超极本体验评测</div>
+            <div class="mdui-card-primary-subtitle mdui-p-l-1 mdui-p-r-1">
+                <span class="title-category ">数码</span>
+                <span class="mdui-text-color-grey mdui-p-l-1 mdui-p-r-1">|</span>
+                <span class="title-date ">2018-5-13</span>
+                <span class="mdui-text-color-grey mdui-p-l-1 mdui-p-r-1">|</span>
+                <span class="title-readCount ">1537次阅读量</span>
+
+            </div>
+            <div class="mdui-card-content mdui-p-l-0">前言
+                2018年，PC行业尤其是笔记本行业趋于成熟稳定，笔记本行业无论从产品的设计，研发，供应链到生产销售都有了自己稳定的商业模式，笔记本产业严重缺乏创新，为什么会产生这样的现象呢？ 今天我们就从这款联想旗下的中高端超极本上找到问题的答案。
+
+                首先我们先简单看一下配置：
+
+                CPU：i5-8250u 15wTDP
+
+                内存：8GB*1 DDR4
+
+                硬盘：256GB 三星PM961
+
+                显卡：集成显卡
+
+                显示屏：13.3寸 72%NTFS色域IPS 玻璃雾面屏
+
+                电池：48W 四芯电池
+
+                首先说明一下，该评测非云评测，我个人作为一名程序员5月初购入的，由于没有专业的拍摄环境因此机器的外观和拆机图来源网络，跑分测试均为亲测。
+                作者：流水吾情
+                https://www.bilibili.com/read/cv474953
+                出处： bilibili</div>
+        </div>
+        <div class="mdui-card-media mdui-float-right mdui-col-lg-5 mdui-col-md-5 mdui-col-lg-5 mdui-col-xl-5">
+            <img src="image/article-1.jpg"/>
+        </div>
+
+
+        <div class="mdui-dialog" id="shareButton">
+        <div class="mdui-dialog-title">请您复制到剪切板后手动发送</div>
+        <div class="mdui-dialog-content" id="printLocation"></div>
+        <div class="mdui-dialog-actions">
+            <button class="mdui-btn mdui-ripple" mdui-dialog-close>确定</button>
+            <button class="mdui-btn mdui-ripple" onclick="CopyLocation()" mdui-dialog-confirm>复制到剪切板</button>
+        </div>
+    </div>
+</div>
+    <div class="card-blank"></div>
+    <div class="mdui-card mdui-ripple">
+        <div class="mdui-card-primary mdui-col-xs-12 mdui-col-lg-5 mdui-col-md-5 mdui-col-lg-5 mdui-col-xl-5">
+            <div class="mdui-card-primary-title .mdui-text-truncate">联想Ideapad720s-13超极本体验评测</div>
+            <div class="mdui-card-primary-subtitle mdui-p-l-1 mdui-p-r-1">
+                <span class="title-category ">数码</span>
+                <span class="mdui-text-color-grey mdui-p-l-1 mdui-p-r-1">|</span>
+                <span class="title-date ">2018-5-13</span>
+                <span class="mdui-text-color-grey mdui-p-l-1 mdui-p-r-1">|</span>
+                <span class="title-readCount ">1537次阅读量</span>
+
+            </div>
+            <div class="mdui-card-content mdui-p-l-0">前言
+                2018年，PC行业尤其是笔记本行业趋于成熟稳定，笔记本行业无论从产品的设计，研发，供应链到生产销售都有了自己稳定的商业模式，笔记本产业严重缺乏创新，为什么会产生这样的现象呢？ 今天我们就从这款联想旗下的中高端超极本上找到问题的答案。
+
+                首先我们先简单看一下配置：
+
+                CPU：i5-8250u 15wTDP
+
+                内存：8GB*1 DDR4
+
+                硬盘：256GB 三星PM961
+
+                显卡：集成显卡
+
+                显示屏：13.3寸 72%NTFS色域IPS 玻璃雾面屏
+
+                电池：48W 四芯电池
+
+                首先说明一下，该评测非云评测，我个人作为一名程序员5月初购入的，由于没有专业的拍摄环境因此机器的外观和拆机图来源网络，跑分测试均为亲测。
+                作者：流水吾情
+                https://www.bilibili.com/read/cv474953
+                出处： bilibili</div>
+        </div>
+        <div class="mdui-card-media mdui-float-right mdui-col-lg-5 mdui-col-md-5 mdui-col-lg-5 mdui-col-xl-5">
+            <img src="image/article-1.jpg"/>
+        </div>
+
+
+        <div class="mdui-dialog" id="shareButton">
+            <div class="mdui-dialog-title">请您复制到剪切板后手动发送</div>
+            <div class="mdui-dialog-content" id="printLocation"></div>
+            <div class="mdui-dialog-actions">
+                <button class="mdui-btn mdui-ripple" mdui-dialog-close>确定</button>
+                <button class="mdui-btn mdui-ripple" onclick="CopyLocation()" mdui-dialog-confirm>复制到剪切板</button>
+            </div>
+        </div>
+    </div>
+    <div class="card-blank"></div>
+    <div class="mdui-card mdui-ripple">
+        <div class="mdui-card-primary mdui-col-xs-12 mdui-col-lg-5 mdui-col-md-5 mdui-col-lg-5 mdui-col-xl-5">
+            <div class="mdui-card-primary-title .mdui-text-truncate">联想Ideapad720s-13超极本体验评测</div>
+            <div class="mdui-card-primary-subtitle mdui-p-l-1 mdui-p-r-1">
+                <span class="title-category ">数码</span>
+                <span class="mdui-text-color-grey mdui-p-l-1 mdui-p-r-1">|</span>
+                <span class="title-date ">2018-5-13</span>
+                <span class="mdui-text-color-grey mdui-p-l-1 mdui-p-r-1">|</span>
+                <span class="title-readCount ">1537次阅读量</span>
+
+            </div>
+            <div class="mdui-card-content mdui-p-l-0">前言
+                2018年，PC行业尤其是笔记本行业趋于成熟稳定，笔记本行业无论从产品的设计，研发，供应链到生产销售都有了自己稳定的商业模式，笔记本产业严重缺乏创新，为什么会产生这样的现象呢？ 今天我们就从这款联想旗下的中高端超极本上找到问题的答案。
+
+                首先我们先简单看一下配置：
+
+                CPU：i5-8250u 15wTDP
+
+                内存：8GB*1 DDR4
+
+                硬盘：256GB 三星PM961
+
+                显卡：集成显卡
+
+                显示屏：13.3寸 72%NTFS色域IPS 玻璃雾面屏
+
+                电池：48W 四芯电池
+
+                首先说明一下，该评测非云评测，我个人作为一名程序员5月初购入的，由于没有专业的拍摄环境因此机器的外观和拆机图来源网络，跑分测试均为亲测。
+                作者：流水吾情
+                https://www.bilibili.com/read/cv474953
+                出处： bilibili</div>
+        </div>
+        <div class="mdui-card-media mdui-float-right mdui-col-lg-5 mdui-col-md-5 mdui-col-lg-5 mdui-col-xl-5">
+            <img src="image/article-1.jpg"/>
+        </div>
+
+
+        <div class="mdui-dialog" id="shareButton">
+            <div class="mdui-dialog-title">请您复制到剪切板后手动发送</div>
+            <div class="mdui-dialog-content" id="printLocation"></div>
+            <div class="mdui-dialog-actions">
+                <button class="mdui-btn mdui-ripple" mdui-dialog-close>确定</button>
+                <button class="mdui-btn mdui-ripple" onclick="CopyLocation()" mdui-dialog-confirm>复制到剪切板</button>
+            </div>
+        </div>
+    </div>
+    <div class="card-blank"></div>
+    <div class="mdui-card mdui-ripple">
+        <div class="mdui-card-primary mdui-col-xs-12 mdui-col-lg-5 mdui-col-md-5 mdui-col-lg-5 mdui-col-xl-5">
+            <div class="mdui-card-primary-title .mdui-text-truncate">联想Ideapad720s-13超极本体验评测</div>
+            <div class="mdui-card-primary-subtitle mdui-p-l-1 mdui-p-r-1">
+                <span class="title-category ">数码</span>
+                <span class="mdui-text-color-grey mdui-p-l-1 mdui-p-r-1">|</span>
+                <span class="title-date ">2018-5-13</span>
+                <span class="mdui-text-color-grey mdui-p-l-1 mdui-p-r-1">|</span>
+                <span class="title-readCount ">1537次阅读量</span>
+
+            </div>
+            <div class="mdui-card-content mdui-p-l-0">前言
+                2018年，PC行业尤其是笔记本行业趋于成熟稳定，笔记本行业无论从产品的设计，研发，供应链到生产销售都有了自己稳定的商业模式，笔记本产业严重缺乏创新，为什么会产生这样的现象呢？ 今天我们就从这款联想旗下的中高端超极本上找到问题的答案。
+
+                首先我们先简单看一下配置：
+
+                CPU：i5-8250u 15wTDP
+
+                内存：8GB*1 DDR4
+
+                硬盘：256GB 三星PM961
+
+                显卡：集成显卡
+
+                显示屏：13.3寸 72%NTFS色域IPS 玻璃雾面屏
+
+                电池：48W 四芯电池
+
+                首先说明一下，该评测非云评测，我个人作为一名程序员5月初购入的，由于没有专业的拍摄环境因此机器的外观和拆机图来源网络，跑分测试均为亲测。
+                作者：流水吾情
+                https://www.bilibili.com/read/cv474953
+                出处： bilibili</div>
+        </div>
+        <div class="mdui-card-media mdui-float-right mdui-col-lg-5 mdui-col-md-5 mdui-col-lg-5 mdui-col-xl-5">
+            <img src="image/article-1.jpg"/>
+        </div>
+
+
+        <div class="mdui-dialog" id="shareButton">
+            <div class="mdui-dialog-title">请您复制到剪切板后手动发送</div>
+            <div class="mdui-dialog-content" id="printLocation"></div>
+            <div class="mdui-dialog-actions">
+                <button class="mdui-btn mdui-ripple" mdui-dialog-close>确定</button>
+                <button class="mdui-btn mdui-ripple" onclick="CopyLocation()" mdui-dialog-confirm>复制到剪切板</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mdui-fab mdui-radio mdui-fab-fixed mdui-color-theme-accent" id="btn">
+    <i class="mdui-icon material-icons">arrow_upward</i>
+</div>
+<script src="js/jquery-3.4.0.min.js"></script>
+<script src="js/mdui.js"></script>
+<script src="js/jquery.qrcode.min.js"></script>
+<script src="js/returnTop.js"></script>
+<script src="js/main.js"></script>
+<script src="js/main2.js"></script>
+<script>
+
+</script>
+</body>
+</html>
